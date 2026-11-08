@@ -1,6 +1,6 @@
 # Joint play, private advice and deviation certificates
 
-This document describes the original joint-law/history layer. [SIGNALS.md](SIGNALS.md) adds the v0.2 private override-signal model, four more CLI modes, complete supplied-garbling lifts and partition audits. The current suite has 49 tests; the 33 core-layer tests below remain unchanged.
+This document describes the original joint-law/history layer. [SIGNALS.md](SIGNALS.md) adds the v0.2 private override-signal model, four more CLI modes, complete supplied-garbling lifts and partition audits. The current suite has 50 tests; the 33 core-layer tests below remain unchanged.
 ## Problem and orientation
 
 Correlab audits a supplied joint distribution Q on a finite two-player normal-form game. A[i,j] is the row player's payoff and B[i,j] is the column player's payoff. Both players maximize. Neither table is negated automatically; this is general-sum, unlike GameLab's row-max/column-min scalar zero-sum convention.
