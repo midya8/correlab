@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1280" viewBox="0 0 1120 1280">
+<rect width="1120" height="1280" fill="#edf2f5"/><rect x="16" y="16" width="1088" height="1248" rx="18" fill="white"/>
+<style>text{font-family:Arial,sans-serif;fill:#24313b}.muted{fill:#5c6c78}</style>
+<text x="42" y="58" font-size="26" font-weight="700">Correlab / the recommendation changes the deviation</text>
+<text x="42" y="88" font-size="17" class="muted">Exact supplied joint-play audits. Both players maximize. No sampling, training or equilibrium search.</text>
+<text x="42" y="135" font-size="21" font-weight="700">1 Coarse obedience does not imply recommendation-wise obedience</text>
+<text x="42" y="166" font-size="17" >Roth lecture-8 game: diagonal payoffs 1, 1, -11/10; joint law is uniform on that diagonal.</text>
+<text x="42" y="197" font-size="17" >Both players have the same figures. On recommendation C, switching to A or B gains 11/10.</text>
+<text x="55" y="239" font-size="17" >Expected obey payoff</text>
+<text x="375" y="239" font-size="18" id="cell-coarse-payoff" data-value="3/10">3/10</text>
+<text x="55" y="277" font-size="17" >Best fixed-action payoff</text>
+<text x="375" y="277" font-size="18" id="cell-coarse-fixed" data-value="0">0</text>
+<text x="55" y="315" font-size="17" >Best fixed gain (raw)</text>
+<text x="375" y="315" font-size="18" id="cell-coarse-raw" data-value="-3/10">-3/10</text>
+<text x="55" y="353" font-size="17" >Clipped CCE epsilon</text>
+<text x="375" y="353" font-size="18" id="cell-coarse-epsilon" data-value="0">0</text>
+<text x="570" y="239" font-size="17" >Pairwise weighted epsilon</text>
+<text x="930" y="239" font-size="18" id="cell-coarse-pair" data-value="11/30">11/30</text>
+<text x="570" y="277" font-size="17" >Full-swap epsilon</text>
+<text x="930" y="277" font-size="18" id="cell-coarse-swap" data-value="11/30">11/30</text>
+<text x="570" y="315" font-size="17" >Worst conditional epsilon</text>
+<text x="930" y="315" font-size="18" id="cell-coarse-conditional" data-value="11/10">11/10</text>
+<text x="570" y="353" font-size="16" >CCE: yes. CE: no. One attaining swap is [A,B,A].</text>
+<text x="42" y="411" font-size="21" font-weight="700">2 The product of the marginals is a different, exploitable law</text>
+<text x="42" y="443" font-size="17" >Coordination game: both payoff tables are [[2,0],[0,1]]. Joint play uses the two diagonal cells.</text>
+<text x="70" y="480" font-size="17" font-weight="700">Supplied joint law</text>
+<rect x="70" y="499" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="87" y="526" font-size="18" id="cell-joint-0-0" data-value="1/2">1/2</text>
+<rect x="150" y="499" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="167" y="526" font-size="18" id="cell-joint-0-1" data-value="0">0</text>
+<rect x="70" y="547" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="87" y="574" font-size="18" id="cell-joint-1-0" data-value="0">0</text>
+<rect x="150" y="547" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="167" y="574" font-size="18" id="cell-joint-1-1" data-value="1/2">1/2</text>
+<text x="360" y="480" font-size="17" font-weight="700">Product control</text>
+<rect x="360" y="499" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="377" y="526" font-size="18" id="cell-product-0-0" data-value="1/4">1/4</text>
+<rect x="440" y="499" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="457" y="526" font-size="18" id="cell-product-0-1" data-value="1/4">1/4</text>
+<rect x="360" y="547" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="377" y="574" font-size="18" id="cell-product-1-0" data-value="1/4">1/4</text>
+<rect x="440" y="547" width="71" height="40" rx="4" fill="#dceae9"/>
+<text x="457" y="574" font-size="18" id="cell-product-1-1" data-value="1/4">1/4</text>
+<text x="640" y="517" font-size="16" >Expected payoff</text>
+<text x="640" y="564" font-size="16" >Full-swap epsilon</text>
+<text x="850" y="481" font-size="16" font-weight="700">Joint</text>
+<text x="965" y="481" font-size="16" font-weight="700">Product</text>
+<text x="850" y="517" font-size="18" id="cell-joint-payoff" data-value="3/2">3/2</text>
+<text x="850" y="564" font-size="18" id="cell-joint-epsilon" data-value="0">0</text>
+<text x="965" y="517" font-size="18" id="cell-product-payoff" data-value="3/4">3/4</text>
+<text x="965" y="564" font-size="18" id="cell-product-epsilon" data-value="1/4">1/4</text>
+<text x="42" y="630" font-size="21" font-weight="700">3 A rare recommendation can hide a large conditional gain</text>
+<text x="42" y="662" font-size="17" >Row action 0 always pays 1; action 1 pays 0. Action 1 is recommended only once per thousand.</text>
+<text x="60" y="705" font-size="17" font-weight="700">Recommendation mass</text>
+<text x="120" y="745" font-size="18" id="cell-rare-mass" data-value="1/1000">1/1000</text>
+<text x="400" y="705" font-size="17" font-weight="700">Weighted gain</text>
+<text x="460" y="745" font-size="18" id="cell-rare-weighted" data-value="1/1000">1/1000</text>
+<text x="770" y="705" font-size="17" font-weight="700">Conditional gain</text>
+<text x="830" y="745" font-size="18" id="cell-rare-conditional" data-value="1">1</text>
+<text x="42" y="800" font-size="21" font-weight="700">4 Full swap regret adds gains across recommendations</text>
+<text x="42" y="832" font-size="17" >One-column game: row payoffs [0,0,1], three equally likely recommendations.</text>
+<text x="60" y="875" font-size="17" >Largest one-pair gain</text>
+<text x="335" y="875" font-size="18" id="cell-aggregate-pair" data-value="1/3">1/3</text>
+<text x="570" y="875" font-size="17" >Full-swap gain</text>
+<text x="820" y="875" font-size="18" id="cell-aggregate-swap" data-value="2/3">2/3</text>
+<text x="60" y="921" font-size="17" >Attaining action map:</text>
+<text x="335" y="921" font-size="18" id="cell-map-0" data-value="2">2</text>
+<text x="400" y="921" font-size="18" id="cell-map-1" data-value="2">2</text>
+<text x="465" y="921" font-size="18" id="cell-map-2" data-value="2">2</text>
+<text x="570" y="921" font-size="16" >Pairwise epsilon and swap epsilon differ.</text>
+<text x="42" y="976" font-size="21" font-weight="700">5 A finite-history identity is not a last-round or learning guarantee</text>
+<text x="42" y="1008" font-size="17" >Developed realized play in the first game: CC, AA, BB, AA, BB, CC.</text>
+<text x="60" y="1052" font-size="16" font-weight="700">Prefix rounds</text>
+<text x="60" y="1095" font-size="16" font-weight="700">Empirical CCE epsilon</text>
+<text x="380" y="1052" font-size="18" id="cell-prefix-0-rounds" data-value="1">1</text>
+<text x="380" y="1095" font-size="18" id="cell-prefix-0-epsilon" data-value="11/10">11/10</text>
+<text x="525" y="1052" font-size="18" id="cell-prefix-1-rounds" data-value="2">2</text>
+<text x="525" y="1095" font-size="18" id="cell-prefix-1-epsilon" data-value="11/20">11/20</text>
+<text x="670" y="1052" font-size="18" id="cell-prefix-2-rounds" data-value="3">3</text>
+<text x="670" y="1095" font-size="18" id="cell-prefix-2-epsilon" data-value="0">0</text>
+<text x="815" y="1052" font-size="18" id="cell-prefix-3-rounds" data-value="6">6</text>
+<text x="815" y="1095" font-size="18" id="cell-prefix-3-epsilon" data-value="0">0</text>
+<text x="60" y="1141" font-size="17" >Final empirical law is CCE, but last-round CCE epsilon is</text>
+<text x="820" y="1141" font-size="18" id="cell-last-epsilon" data-value="11/10">11/10</text>
+<text x="42" y="1192" font-size="16" >All deviation terms, conditional gains, swap choices and realized regret totals remain in the JSON.</text>
+<text x="42" y="1226" font-size="15" class="muted">Small supplied games only. No causal, convergence, statistical, safety or real-agent performance claim.</text>
+<metadata id="report-zlib-base64">eJztnX1zm7oSh78Lf5spYPfMcb9KpuNxE5L4XsfO2M7p6e30u1+QEK9aISEBwvlNp0kM1guLWK2eXS2/g/3LyyV92d/S3fXn/j349jt4fEx36fv1cDyfgm9B8mUdrILs0OP59HS4Hc6n/bF2OuYn3/eHy8/DtV4wFgXzersVno8fb6es3K/z8/M1+PbwEETB91Xt5/dVcLjuss4E3573x2vKPzY+nfbX19375fz08XirHy8P3S4f2ZH/nA+nG2si71NefeN31tDb/vJyyC7syq6fdS37fnZx2bnL+Sf7m3W7+vn9zyp4P+5/pZe897+D/e22P5wOp5dCjg/JKvuXlW+eyK7geOQlHl/P1/S02z/mQg2+JblQTrfL4ccHP1A0dn5/P5/S0638YpQ1zMS2ezo8P6eX9JRLhd2J7MJ/7H8cjofbr7L8JX08v72lp6f0qariz2rW9mOt9iOD1iOD1pM/3dvC6xQD+ry/ZGP5R3oV7eZ3LL+ZxZmn9J/DXhz/Hfz4tSvb2fM2HliP8v8hH2xBUSZrsGwrP11WxS7tJetTdoKVyWXkqOZYs+b6II+IquNm1UlZdf5g/6lk9Lb/d3fZ/9zVzq6C9N/39PGW3YuquuL4Lb3kmiXTRZf0Vn4/e3D58YbE84enpo2KFrrSfNtfr92RUJ3P6n4rnkXXIy8XxM/08PKaX2zZQTbse3seL6fn3cEwuOcutI2s78VxJ2Mm9kfyhmPGo54bjhlVz2cZM2FsNmgSxQWEZlcQ6l9Cqeg1rqBv8Ph3BZHZGFJdwGijv7Jgd+cf6dMhPd2apmz38Pn9dnjLrpJbiq/nw2PK5rvM9Cj+f29/6fyRl4/z/hYmeDlnlnMpFwq3VrOPuUXbltEulx9rrGvprgLWVGtq/nm+ZOaR9PnOb1rHHo4MbOFoMltQZglrth7P2nrionWFHRyRdnBkagcbGr+RwoqMpDZkJLUgI2f24/Q22EqvUqMhqFup0cgy0X18Nd5WffwopfmiYRovquu7YkGvUnldJRepVBwfogVm2DGhno9gJ2AnYCdgJ2AnHq+DPeo52MlCxoxHPQc7mZs8gJ2AnYCdgJ2AnYCdgJ1Ys5N+vpBpXBJ1xOwb19f9eyblh/Uqzj7dzressX/2Fz4Yd8+X81tFNZhpNXPr+Z09nW8MyLSRUaQERvGXOKKhUdbnSIqNyjNdcBSztXCxZH3gf1Yfq9Uya7nOlWoD0ggrFYeakl8VLYk2q1V01Yc+3tSdeYfSp2gVrz7vjBvNON+atB07ljrVtoy3abbtwMqxaN1a6rK27cZ6dwFDtZ04H+mS1ZNd40Kr6gpeaG8nqFV4AqRGJpuJDHFryGvkF2WKXNf5lZFktKg6Mqs+1q6eizBUo9dQ3C4pfw3VAJb3QGY+lyfGs6Dn4JiubejIvQUdmZGzMDHjNioBFwNam9skYwi5W+lkQuZPix4fs8HajviYnZxl04alnEP5VEAIWw1UEzO94Ypla44+6kmh5mi7J2XEYe2Ny0B/8M0LOEzVs0PPhq1FKhvHhCbStzUdCNmh2hA1OXLFjCBxa9NeUqc7i13q+GK1U467rsBtPEcmAteVzgiT4owC98bLNYLCHsHQc8Oje1xxUaaOsqUpW6ASaDpRO+OK8eTMHScqpB1ysVh7AhMCEyraBiYEJpQ2DkwITAhMCEwITAhMCEwITAhMCEwITAhMCEzog8CBCT8DJtSIYnVFCnX2BWdf3eZ1qQI9RSinPNBTFO8GevIzDgM9HW4g3jLhip88zFbj2ERBn9HMNHdLAJ5ptlmM0LqBVrFrPWHlh69J6Pb12GZIdMBk+WLXg7Hkr9d6bCR/mdFLta+HWEOiAyZmt10PhOK1tWDoXgzbbjQE8RYAdmvMd3mh3q33BnXHunWH4gaUfwwEvNnZzVcF4hXVdxFvWJ2S2CPbBYPe7RgsQb9SIzU2V+4AagowYb1SkZhNLdrVTixp4qmzQb5G4pZrfNlS1Ejc2tWGphMEAXEowRf1T5GrwYWxJUfADmyo+Ue6NwT4jvX2EG2iToVhb7/KabADs9RDbSIRvw0WXpr43Rn7BK7cqvhwW/KWCUgWNY3OKHlvQPFd6HWH+V3YGrf2kyDGf/cR422DGDsILN324eI1GVgKFAkUCRQJFAkUCRQJFHlfpg9Q5PLgAVAkUCRQJPQ2UKRv2gQoEigSKBIo8o5RpJvgVS0aSSRmHR632U6fahyFWmVXXVvkdl3KBfCdRdkdP1+eDqfi+W1HDzPGQkUOFyclUcPFmVbEMAc2nWjhpHFJMZ35tfwwJPFrq5XsszLWNxFfqkX5lsc0krrOitQTAqf5lqvhvvIlUFKPVRBzzYo5SuDOdpwneu8DiuqvGkpUiDFQvGPoS3cLc7V7TrF5nReU7V3nx0fcut64TRNgxGSUzTau9pmbSoMNByvcZy0P6UYv6XJu2LthZCKZeo8y74XVGi6h9mAmAxjOmDKRjm/3lr5cHm7fgZDvJbN/D0JvPEDNODF7GQKRWgrGCowVGCswVmCswFiBsQJjxfFLm4bbK1ob3L9sVJCKt069+nojBVXFcTNU5XDv+obJa1OAwvLTiLxq3hDQzYwmoG3rhPIziAug2tcMwuQVWGlfugcKY5B+AfcAU5CPdiNLMC+iSsC4GWoK5vXSgXCsXpktuJHagvz7C7UGN2NMbRvToAfJvbKwCI0eV6lNKJWK2VMofwgJE2ijiEhoy8bGNHShyeTmoQMFJX/788Z763Dqh8ilhzn3LA99kfHGDdDiFdGu5GJ9AIsGFg0sGlg0niljWDSwaGDR3KNFY0W9dIwaIjqOJkPt4DEZqhLxYckqsQhwm7AP3L4LXg/X2/nyK2de1ZzMa+CW3kNcxEFWf+dn8znvNX3873ve+7xMvEpW69Vf2fHjPhP+JbvzmW3wkd0BaeJM8QJ0giz2vSFdnO0mzoyJULj5E2eKNpottt6OrkKRtS+VKLJ2zPfUmCYe4Tm90a73Qo/QtoFXyfkecP3tUyM0jrcc9dk/do0LBWq5HYLsw+R7zuMhe85V7x8aUHdsWrdqp3k7r3y10zxSbzInXmkUVqckWxhiw4CL08fxSKwxGgNz9PXoMvKwmwVwdIQbTyJcqWa3lO6MrzPSlm4yjXTne1+DiXSN3kZCb/Q01A8Th9tY2zu+DWG1glhU4I5/wlXrh4lfWWRtNfqhH3peVSSR8328qMiJ0U3sQI4HvqZoRGHP+5KieYTdtdsnEPRSVbNcvs63eReYs/xNAuzevd58jGh65Rsgr7PFm1U17E3mAHwAfAB8AHwAfAB8AHwe2DEAfB5LF4APgM/Q3vFtCAPwAfAB8PkuZwC+CSc9AL4lqOaFA77+IFUHjE9rizZCKYlPCKV0AaBAWkFa3bcN0grSCtIK0urPWh+kFaQVpBWkFaTVP/0A0grS6jv8A2kFafVTNS+ctCKUEoAPgA+Az17oAHwAfAB8i7VjAPg8li4AHwCfob3j2xAG4APgA+DzXc4AfBNOegB8S1DNCwd8U4dSDoki9OL91553N30+/JsW8ZJI+4lYVaBsoGyg7BNQNlA2UDZQNlA2MVP5Jl2gbKBsQ3vHtyEMlA2UDZTtu5yBsiec9ICyl6CaF46yEasKwAfAB8BnL3QAPgA+AL7F2jEAfB5LF4APgM/Q3vFtCAPwAfAB8PkuZwC+CSc9AL4lqOaFAz6k/UQoJUgrSOsJpBWkFaQVpBWkddlrfZBWkFaQVpBWkFb/9ANIK0ir7/APpBWk1U/VvHDSilBKAD4APgA+e6ED8AHwAfAt1o4B4PNYugB8AHyG9o5vQxiAD4APgM93OQPwTTjpAfAtQTUvHPAh7ec9pP1kN78YKgydNn6zwXJJ98fD/7IR+phebofnw+P+JtKEPt4+shZYO/X5kcSyrfV3WVIUzDOQCpTCTzYGUlgCiRZmrg2uTp35ufesVnG8IMfzd718gAx7zwbKx+npWpA+OllrwnjT4AhjUbwbYczP+BBhXByqnrasczrPW/YtRZhxVQn7Yhlq3Drue7gx7y78EfBHwB/htT8icWCtk8+60iPBixE+icEeiYSi+7w5yieRKPwGxbSirj7s1F/5JcJtT/2NiYNyTSSka4JVoPROJJR3QpyR2NyJoXOivQSrgYXmABndO8HEsYBlmBkh4zpXDhOMBczGtIWLwoGIZyS82dVTMo5JjjBAxqyIBbVxIOW5YaTQTfBXzI/U4a+Av+Ke/BVSjXwfHgtHZjmB0ZOBPotRBT6v12IugdN+i1GFvVQlTcnYse9Cz2/xV5/bImm4LXrikjvkr+O3SHT8Fj7GJoMGggaCBoIGggYGoIGggaCBoIGggaCBoIH3oo1BA0EDx5I0aCBoIGggbdovlAb2BzE7AoI6OWGT+Msmr4uM2EyqmExJxGateCtiszzjQ8RmOyds1rdSwBtJyGbr/CcI2ty4x5WLwLSjXDlA7biglt+04RYcfdOXAWs3LowUWgTTwlo+URjDWl5MB6Yq6lfS2nirbkHMcBbAtrgIEtmKJqTIdiNHtqLMQpHtZiH258YQ2sadcTYZUJRhW2sxTwK6KDGHNSLaxePSR85G2iazjRTfWktbcwEbmk4OBKAh5V4qLHDc+VEjOC447rI4rkQ123BcF+uA6ViuI6tdJvLKGJbRoI7MbVDukqbDcYWukrk3OPcODOqxgC6Fc9dKnCuWV46CO0V1JMtNSq8BqCGoIaghqCGoIaghqOGdGTmghqCGoIaghqCGoIaghqCGoIaghqCG90sNrYNAdcGhNJutefyjF1ltfe82X18EVX7b2EF+23FyxJaCcJLfNpbnt52+64Py28aN/LaMpxH5bfPSw3Pbrouz3dy2/IzDSGke8Owkte268Yjxh2vd6UN+TBknvS4Lsq/WIqVbZ/pjpeOZvR7r4HN6PUzajid6yaEM/Wu2rS1z+o5btI6cFqM7PNYurHjq1isdHgkr5vCteyGvkV+U3GnQXSEL/LZWvhyvqDoyqz7Wrp6LMKwmDcrjsVZ4PLLCtL+D90Dm7yhPtO1xh66OxgCZwNWxXsTKzGFOC1MBFwPaytFhLeQ5s1okVfdN8loYyzk2k7OM6VjLeW5syYRAksv2sO7TGxP7NqgnRd+9YXIHRxzWClI5ppgncXJMKGJtP3Sf2pjY0UFpIn1b04GQHaqNnnQXMonfR7oLRxY7kX1hPTTdxZgCnzfdxVwCV3g6xhT2Ur3SlIwpP0cN/5m5OWJ1potE6eQQ40k/NLoDBTuJLtZKH4cy8y0wITAhMCEwITAhMGHVA2BCnwwbYEJgQmBCYEJgQmBCYEJgQr+pFTAhMKHP1vRCMaFOLLQjUqiTEjf76javSxXoKUI55YGeong30JOf8TMl7pYJV/zk8dQaxyYK+pw71cWWADxT0NxRWjfQKnatJ6z88DUJ3b4e2wyJDpgsX+x6MJb8dfNemMhfZvRS7esh1pDogInZbdcDoXhtLRi6FwrIyzW+M8RbANitMd/lhUgAO6DuWLfuUNyA8o+BgDffmvdV/YqzrRzxhtUpiT2yXTDo3Y7BEvQrNVJjRjTBcKXVw3pNdCAxBUhEYja1aFc7saSJp84G+RqJW67xZUtRI3FrVxuaThBkAgy54Iv6SZBjqE1U2MyFsSVHwA5sqPlHujcE+I719hBtohK0C/tVToMdmKUeahOJ+G2w8NLE787YJ3DlVsWH25K34cNLm0ZnlLw3oPgu9LrL3BkrwYqVxPjvPmK8bRBjB4Gl2z5cvPY26y5QJFAkUCRQJFAkUCRQpIfYACgSKBIoEijSpU4BigSKBIpclviBIoEigSLvG0W6CV7VopFEKt/hcZueJPVdygXwnUWBLL1vPDC975ZMkRsrU+TmhYj0uO2r7GBzk9S4iSyx77SdHpTSN2mk9F2zi0BKX6T0Ra4O5OpArg7k6kCuDimBQq4Ocp2GXB3I1TGbkJGrw5tN98jVgVwdLqzP2dUzcnUgVwdydSBXB3J1IFcHUvoCEwITAhMCEwITAhMCEwITAhMCEwITAhMCEwITAhMCEwITAhMCEyKlL1L6tu8aUvoij4bpmgR5NJBHA3k0kEcDeTQI5bD4fXvIozGvpJFHA3k0kEfDUNLQ28ij4aU2QR4N5NFAHg3k0bjjPBpI6QsUCRQJFAkUCRQJFAkU6Rk2AIoEigSKBIp0qVOAIoEigSKXJX6gSKBIoMj7RpFI6ft5U/omZUrfpEzpmxim9P0ajJcc96t+Qt+vQTcv7kaez3e6Hvdl8yU6XUvm+1fzQ/b3/pJ2sFAnAjwbHhGDZWQIeECGf9fKtuO/y1PdAPCoNUpHifHebreiC1HxTFUfFXHcgpIV0du1aooKdOK3Z3SZ1Dq8zIQc5X2ysX0VErDwHRjsLaLaVhBr9pzJibU5rxaDVYp7W1sXa7Cal6KJcuupMsuKUBZWkGRRexcl15qWwGRxyglNlj1DoyPlSjoj7L6y2dka28qlPmosVlWuBCTfXihb8dcHLLHopxf8hKDUyMWV6htjt6RscdhozYD6DRCO7QJx4mfL5WIuN7epJVysXsIJSeuGk0jsnc4STnyBXsOR0SSf2zBS2iUWHRglZdhUVqHSJnLuxTf03vd67g1tIJXtIzd75PaOO8f5ndg4cWVZOvBKfQqhEDbN6eN4JAbLtFP27JZwRxLxJ5CEQfIEfrQfQROWy0ZpuZiCZ6GNm7aK0kzRzZEAQgZCBkIGQgZCBkIGQgZCBkIGQgZCBkIGQgZCthwbB4QMhAyEDIRsOCHTR0eyWMW4xbNEOGKySgbHU87Rjz//B08hGZ4=</metadata></svg>
