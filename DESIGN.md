@@ -1,5 +1,6 @@
 # Joint play, private advice and deviation certificates
 
+This document describes the original joint-law/history layer. [SIGNALS.md](SIGNALS.md) adds the v0.2 private override-signal model, four more CLI modes, complete supplied-garbling lifts and partition audits. The current suite has 49 tests; the 33 core-layer tests below remain unchanged.
 ## Problem and orientation
 
 Correlab audits a supplied joint distribution Q on a finite two-player normal-form game. A[i,j] is the row player's payoff and B[i,j] is the column player's payoff. Both players maximize. Neither table is negated automatically; this is general-sum, unlike GameLab's row-max/column-min scalar zero-sum convention.
@@ -68,7 +69,7 @@ CLI commands are `python -m correlab demo`, `audit FILE` and `history FILE`. The
 
 ## Verification and attribution
 
-33 tests include 2,835 combinations of all 81 ternary 2x2 row payoff tables with 35 quarter-grid joint laws, paired with a separately varied column table, versus exhaustive swap-map and one-pair enumeration. Another 28 rectangular/larger controls enumerate every map, up to 256 per player. All 256 length-four histories in a 2x2 game are checked at three prefixes, including direct counterfactual identities. Positive affine player-specific transforms, transpose/player exchange, product Nash, negative raw coarse gains, zero-mass recommendations, 256 tied maps, replication, order changes, capacity, exact parsing, strict CLI and no-mutation/RNG checks are covered. Three SVG tests bind all 36 numeric cells, the complete compressed report, hidden-term tamper sensitivity and byte-exact regeneration. These are bounded deterministic controls, not benchmark evidence of agent strength.
+The original 33 tests include 2,835 combinations of all 81 ternary 2x2 row payoff tables with 35 quarter-grid joint laws, paired with a separately varied column table, versus exhaustive swap-map and one-pair enumeration. Another 28 rectangular/larger controls enumerate every map, up to 256 per player. All 256 length-four histories in a 2x2 game are checked at three prefixes, including direct counterfactual identities. Positive affine player-specific transforms, transpose/player exchange, product Nash, negative raw coarse gains, zero-mass recommendations, 256 tied maps, replication, order changes, capacity, exact parsing, strict CLI and no-mutation/RNG checks are covered. Three SVG tests bind all 36 numeric cells, the complete compressed report, hidden-term tamper sensitivity and byte-exact regeneration. These are bounded deterministic controls, not benchmark evidence of agent strength.
 
 This project implements established equilibrium/regret definitions, not a new algorithm or theorem. Six consulted sources:
 
