@@ -160,7 +160,10 @@ under identity, constant and noisy channels (8,505 channel audits); the column
 payoffs vary deterministically. It checks endpoint identities against v0.1.
 Another 28 rectangular/larger cases enumerate four-signal policies, up to
 625 policies per player. 243 supplied post-garbling cases check the lifted
-policy and exact per-signal slack identity. Other tests cover all partition
+policy and exact per-signal slack identity. All 16 pairs of original and garbled
+signal counts 1..4 are additionally checked against independent composition,
+full policy enumeration and direct joint-cell simulation of the lifted policy.
+Other tests cover all partition
 counts/refinements, known controls, unreachable signals, full ties, pass,
 independent noise, positive scaling, payoff shifts, player exchange, composition,
 no mutation, invalid channels, and strict CLI behavior. The figure binds its
