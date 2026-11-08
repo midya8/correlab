@@ -82,6 +82,33 @@ class SignalTests(unittest.TestCase):
                 count+=1
         self.assertEqual(count,243) # 3**4 channels/garblings times three column channels
 
+    def test_all_16_signal_alphabet_pairs_against_direct_composition(self):
+        a=[[2,-1],[0,1],[-2,3]];b=[[0,2],[1,-1],[3,0]]
+        q=[[F(1,6)]*2 for _ in range(3)]
+        def stochastic(rows,cols):
+            w=[[1+(i+2*j)%3 for j in range(cols)] for i in range(rows)]
+            return [[F(x,sum(r)) for x in r] for r in w]
+        for s in range(1,5):
+            for t in range(1,5):
+                kr,kc=stochastic(3,s),stochastic(2,s);h=stochastic(s,t)
+                result=garble(a,b,q,kr,kc,h,h)
+                for p,aa,qq,k in zip(result['garbled']['players'],(a,list(map(list,zip(*b)))),
+                                     (q,list(map(list,zip(*q)))),(kr,kc)):
+                    direct=[[sum(k[i][z]*h[z][v] for z in range(s)) for v in range(t)] for i in range(len(k))]
+                    self.assertEqual(p['channel'],direct)
+                    best,policies=reference(aa,qq,direct)
+                    self.assertEqual(p['override_gain'],best);self.assertEqual(p['attaining_policy'],policies[0])
+                for cert,p,aa,qq,k in zip(result['certificates'],result['original']['players'],
+                                         (a,list(map(list,zip(*b)))),(q,list(map(list,zip(*q)))),(kr,kc)):
+                    direct_gain=F(0)
+                    for z,rec in enumerate(cert['lifted_coarse_policy']):
+                        for choice in rec['choice_distribution']:
+                            d=choice['choice']
+                            for i in range(len(qq)):
+                                for j in range(len(qq[0])):
+                                    direct_gain+=qq[i][j]*k[i][z]*choice['probability']*(0 if d=='pass' else aa[d][j]-aa[i][j])
+                    self.assertEqual(direct_gain,cert['lifted_gain'])
+
     def test_composition_associativity_and_identity(self):
         from correlab.signals import _compose
         k=[[F(1,4),F(3,4)],[F(2,3),F(1,3)]];h=[[F(1,3),F(1,3),F(1,3)],[F(1,2),0,F(1,2)]]
