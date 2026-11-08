@@ -4,6 +4,33 @@ Exact-rational joint-play obedience certificates for small general-sum multi-age
 
 ![Five exact obedience controls](assets/obedience-audit.svg)
 
+## v0.2: private override signals
+
+![Exact private-signal controls](assets/private-signals.svg)
+
+What if a player sees only a noisy signal, rather than the baseline action?
+The new [private-signal proof and schema](SIGNALS.md) defines a trusted executor:
+the player may pass or override, but its baseline action is not separately
+revealed. Exact channel audits bridge clipped coarse gain and full-swap gain.
+Supplied stochastic post-garblings include a lifted policy and nonnegative
+per-signal slacks, not merely a numeric monotonicity check. All deterministic
+own-action partitions through four actions retain full audits and every
+strict refinement comparison.
+
+The Roth control reveals C with probability `0, 1/4, 1/2, 1`, producing gains
+`0, 11/120, 11/60, 11/30`. A developed cyclic control gives three different
+gains `4/3, 5/3, 1` for three two-signal partitions of the same three actions.
+This is a fixed unilateral decision problem, not CE of a changed game,
+simultaneous overrides, information-order search, privacy or agent safety.
+
+```
+python -m correlab signal-demo
+python -m correlab signals examples/signals-input.json
+python -m correlab garble examples/garble-input.json
+python -m correlab partitions examples/partitions-input.json
+python examples/render_signals.py --check
+```
+
 ## Why a single regret number can mislead
 
 A supplied joint law can be coarse correlated equilibrium (CCE) while giving a player a profitable deviation after seeing their own recommendation. Replacing that law with the product of its marginals changes the object. A small weighted deviation can still conceal a large conditional incentive on a rare signal. Even pairwise internal regret and full-swap regret are different positive-epsilon conventions.
@@ -44,10 +71,12 @@ Both payoff tables use row/column indexing. Both players maximize their own tabl
 
 ## Verification
 
-33 tests. All 81 ternary 2x2 row tables with 35 quarter-grid laws (2,835 game/law cases) are checked against independently exhaustive deviation maps with a separately varied column table; 28 more rectangular/larger controls cover up to 256 maps per player. All 256 length-four 2x2 histories are checked at three prefixes. Tests also cover exact ties, zero recommendations, transforms/player exchange, replication, order, strict invalid inputs, CLI parity and unchanged inputs/RNG. Three figure tests bind all 36 numeric cells and full compressed report metadata, detect hidden-term tampering and require byte-exact SVG regeneration. CI runs Python 3.10-3.13 plus six-module wheel parity for all three complete CLI outputs outside checkout.
+49 tests. All 81 ternary 2x2 row tables with 35 quarter-grid laws (2,835 game/law cases) are checked against independently exhaustive deviation maps with a separately varied column table; 28 more rectangular/larger controls cover up to 256 maps per player. All 256 length-four 2x2 histories are checked at three prefixes. Tests also cover exact ties, zero recommendations, transforms/player exchange, replication, order, strict invalid inputs, CLI parity and unchanged inputs/RNG. Three figure tests bind all 36 numeric cells and full compressed report metadata, detect hidden-term tampering and require byte-exact SVG regeneration. CI runs Python 3.10-3.13 plus seven-module wheel parity for all seven complete CLI outputs outside checkout.
 
 ## Scope and attribution
 
 Supplied finite bimatrix games and supplied exact joint laws or realized histories only. Epsilon values are payoff incentives, not geometric distance or statistical confidence. No equilibrium search, adaptive algorithm, causal experiment, training guarantee, hidden-information game, real-agent strength, scalable mechanism optimizer or production-safety claim.
 
 Established definitions from Blum-Mansour, Bonn, Roth, Barakat, Charles University and Hart-Mas-Colell are linked and reconciled in [DESIGN.md](DESIGN.md). The Roth CCE-not-CE fixture is adapted with exact arithmetic; other controls are developed examples. The source notes identify cost/payoff orientation differences and two displayed-text typos rather than inheriting them silently. MIT license.
+
+The v0.2 signal tests additionally enumerate 8,505 channel audits, 28 rectangular/larger four-signal cases (up to 625 policies per player), and 243 post-garbling lift certificates. The original three CLI outputs and obedience SVG are unchanged. CI checks all seven CLI modes and both reproducible figures.
