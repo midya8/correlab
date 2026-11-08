@@ -71,11 +71,11 @@ Both payoff tables use row/column indexing. Both players maximize their own tabl
 
 ## Verification
 
-49 tests. All 81 ternary 2x2 row tables with 35 quarter-grid laws (2,835 game/law cases) are checked against independently exhaustive deviation maps with a separately varied column table; 28 more rectangular/larger controls cover up to 256 maps per player. All 256 length-four 2x2 histories are checked at three prefixes. Tests also cover exact ties, zero recommendations, transforms/player exchange, replication, order, strict invalid inputs, CLI parity and unchanged inputs/RNG. Three figure tests bind all 36 numeric cells and full compressed report metadata, detect hidden-term tampering and require byte-exact SVG regeneration. CI runs Python 3.10-3.13 plus seven-module wheel parity for all seven complete CLI outputs outside checkout.
+50 tests. All 81 ternary 2x2 row tables with 35 quarter-grid laws (2,835 game/law cases) are checked against independently exhaustive deviation maps with a separately varied column table; 28 more rectangular/larger controls cover up to 256 maps per player. All 256 length-four 2x2 histories are checked at three prefixes. Tests also cover exact ties, zero recommendations, transforms/player exchange, replication, order, strict invalid inputs, CLI parity and unchanged inputs/RNG. Three figure tests bind all 36 numeric cells and full compressed report metadata, detect hidden-term tampering and require byte-exact SVG regeneration. CI runs Python 3.10-3.13 plus seven-module wheel parity for all seven complete CLI outputs outside checkout.
 
 ## Scope and attribution
 
-Supplied finite bimatrix games and supplied exact joint laws or realized histories only. Epsilon values are payoff incentives, not geometric distance or statistical confidence. No equilibrium search, adaptive algorithm, causal experiment, training guarantee, hidden-information game, real-agent strength, scalable mechanism optimizer or production-safety claim.
+Supplied finite bimatrix games and supplied exact joint laws or realized histories only. Epsilon values are payoff incentives, not geometric distance or statistical confidence. No equilibrium search, adaptive algorithm, causal experiment, training guarantee, general private-information game solver, real-agent strength, scalable mechanism optimizer or production-safety claim.
 
 Established definitions from Blum-Mansour, Bonn, Roth, Barakat, Charles University and Hart-Mas-Colell are linked and reconciled in [DESIGN.md](DESIGN.md). The Roth CCE-not-CE fixture is adapted with exact arithmetic; other controls are developed examples. The source notes identify cost/payoff orientation differences and two displayed-text typos rather than inheriting them silently. MIT license.
 
