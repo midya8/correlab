@@ -1,15 +1,34 @@
 # Correlab
 
-Exact-rational joint-play obedience certificates for small general-sum multi-agent games. The recommendation changes which deviations are available.
+Audit a supplied joint play distribution in a small two-player general-sum
+game. Correlab returns exact rational gains for fixed-action, recommendation-
+conditioned and full-swap deviations, including an attaining action map.
+A separate private-signal mode lets a player pass or override through a trusted
+executor without separately seeing its baseline action.
+
+The game, joint law and signal channel are inputs. This is not an equilibrium
+search algorithm, a learner or a guarantee about real agents.
 
 ![Five exact obedience controls](assets/obedience-audit.svg)
 
-## v0.2: private override signals
+## Choose what the player knows
+
+| Question | Command | Information available to the player |
+| --- | --- | --- |
+| Is the supplied law obedient? | `audit` | Its own recommendation; fixed-action, pairwise and full-swap gains remain distinct. |
+| What holds for a realized history? | `history` | The same own-recommendation model, applied to empirical prefixes. |
+| What can a noisy signal reveal? | `signals` | A private signal and a pass-or-override executor; not a separate view of the baseline action. |
+| What changes after a supplied post-garbling? | `garble` | The coarser signal, with an explicit lifted policy and per-signal slack. |
+| What do deterministic partitions reveal? | `partitions` | A partition of its own baseline action, with strict refinement comparisons. |
+
+`demo` and `signal-demo` produce saved examples of the two models.
+
+## Private override signals
 
 ![Exact private-signal controls](assets/private-signals.svg)
 
 What if a player sees only a noisy signal, rather than the baseline action?
-The new [private-signal proof and schema](SIGNALS.md) defines a trusted executor:
+The [private-signal proof and schema](SIGNALS.md) defines a trusted executor:
 the player may pass or override, but its baseline action is not separately
 revealed. Exact channel audits bridge clipped coarse gain and full-swap gain.
 Supplied stochastic post-garblings include a lifted policy and nonnegative
@@ -69,14 +88,24 @@ Both payoff tables use row/column indexing. Both players maximize their own tabl
 - **Pairwise is not full swap.** Three equally likely recommendations with row payoffs [0,0,1] give largest single-pair gain 1/3 but full-swap gain 2/3. The attaining action map is [2,2,2].
 - **Empirical average is not last round.** A developed six-round history ends with an empirical CCE, but its last joint action has CCE epsilon 11/10. Prefix reports include exact realized/counterfactual totals and the identities connecting them to average regrets. This is finite arithmetic, not an implemented learner or convergence result.
 
-## Verification
+## Checks and limits of the evidence
 
-50 tests. All 81 ternary 2x2 row tables with 35 quarter-grid laws (2,835 game/law cases) are checked against independently exhaustive deviation maps with a separately varied column table; 28 more rectangular/larger controls cover up to 256 maps per player. All 256 length-four 2x2 histories are checked at three prefixes. Tests also cover exact ties, zero recommendations, transforms/player exchange, replication, order, strict invalid inputs, CLI parity and unchanged inputs/RNG. Three figure tests bind all 36 numeric cells and full compressed report metadata, detect hidden-term tampering and require byte-exact SVG regeneration. CI runs Python 3.10-3.13 plus seven-module wheel parity for all seven complete CLI outputs outside checkout.
+The 50 tests check the full witnesses, not only the largest gain:
+
+- Original obedience: 2,835 game/law cases from 81 ternary 2x2 row tables and 35 quarter-grid laws, with a separately varied column table. Independent action-map enumeration checks the production maximum; 28 rectangular/larger controls reach 256 maps per player.
+- Histories: all 256 length-four 2x2 histories at three prefixes. Other checks cover exact ties, zero recommendations, transforms/player exchange, replication, order, invalid inputs, CLI parity and unchanged inputs/RNG.
+- Private signals: 8,505 channel audits, 28 rectangular/larger four-signal cases with up to 625 policies per player, and 243 post-garbling lift certificates.
+- Figures: three tests bind the obedience figure's 36 numeric cells and full compressed report metadata, reject hidden-term tampering and require byte-exact regeneration. Both figures have regeneration checks.
+
+CI runs Python 3.10 through 3.13. The wheel job compares all seven complete
+CLI outputs outside the checkout; the original three CLI outputs and
+obedience SVG remain unchanged by the separate signal mode.
+
+These are finite arithmetic and implementation checks. They do not establish
+learning convergence, agent strength or statistical generalization.
 
 ## Scope and attribution
 
 Supplied finite bimatrix games and supplied exact joint laws or realized histories only. Epsilon values are payoff incentives, not geometric distance or statistical confidence. No equilibrium search, adaptive algorithm, causal experiment, training guarantee, general private-information game solver, real-agent strength, scalable mechanism optimizer or production-safety claim.
 
 Established definitions from Blum-Mansour, Bonn, Roth, Barakat, Charles University and Hart-Mas-Colell are linked and reconciled in [DESIGN.md](DESIGN.md). The Roth CCE-not-CE fixture is adapted with exact arithmetic; other controls are developed examples. The source notes identify cost/payoff orientation differences and two displayed-text typos rather than inheriting them silently. MIT license.
-
-The v0.2 signal tests additionally enumerate 8,505 channel audits, 28 rectangular/larger four-signal cases (up to 625 policies per player), and 243 post-garbling lift certificates. The original three CLI outputs and obedience SVG are unchanged. CI checks all seven CLI modes and both reproducible figures.
