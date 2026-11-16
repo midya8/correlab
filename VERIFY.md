@@ -35,7 +35,7 @@ python -m correlab verify examples/verify-input.json
 python examples/verify_wheel.py
 ```
 
-The verify command prints a JSON result. Exit zero means consistent; exit one means an invalid or inconsistent report. Unreadable files, malformed JSON, duplicate keys, nonfinite constants, malformed UTF-8, excessive nesting or files over the existing 2 MB input limit exit two with empty stdout. No schema-version field is added to the existing report format. Unknown fields are rejected rather than silently ignored.
+The verify command prints a JSON result. Exit zero means consistent; exit one means an invalid or inconsistent report. Unreadable files, malformed JSON, duplicate keys, nonfinite constants, malformed UTF-8, parser-recursion failures or files over the existing 2 MB input limit exit two with empty stdout. No schema-version field is added to the existing report format. Unknown fields are rejected rather than silently ignored.
 
 Embedded payoff and probability matrices use the existing parser: one to four actions per side, exact integers/Fractions/rational or decimal strings, no float or boolean values, at most 512-bit input rational components and 160-character input strings. The embedded joint law must normalize exactly and have the same shape as both payoff tables.
 
