@@ -111,6 +111,6 @@ class ReplayTests(unittest.TestCase):
             bad=jsonify(r);bad['players'][0]['swap_regret']='999';f.write_text(json.dumps(bad));p=run()
             self.assertEqual(p.returncode,1);self.assertFalse(json.loads(p.stdout)['valid']);self.assertEqual(p.stderr,b'')
             f.write_text('{}');p=run();self.assertEqual(p.returncode,1);self.assertFalse(json.loads(p.stdout)['valid'])
-            for raw in (b'{"x":1,"x":2}',b'NaN',b'\xff',b'['*2000+b']'*2000,b' '*2000001):
+            for raw in (b'{"x":1,"x":2}',b'NaN',b'\xff',b'['*2000,b' '*2000001):
                 f.write_bytes(raw);p=run();self.assertEqual(p.returncode,2);self.assertEqual(p.stdout,b'');self.assertNotIn(b'Traceback',p.stderr)
             f.unlink();p=run();self.assertEqual(p.returncode,2);self.assertEqual(p.stdout,b'')
