@@ -1,7 +1,7 @@
-"""Offline strict JSON CLI: demo, signal-demo, audit, history, signals, garble, partitions."""
+"""Offline strict JSON CLI: demo, signal-demo, audit, history, signals, garble, partitions, verify."""
 import argparse,json,sys
 from pathlib import Path
-from . import audit,history,demo,signals,garble,partition_audit,signal_demo
+from . import audit,history,demo,signals,garble,partition_audit,signal_demo,verify_audit
 from .exact import jsonify
 
 
@@ -16,7 +16,7 @@ def unique(pairs):
 def main():
     p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='mode',required=True)
     sub.add_parser('demo');sub.add_parser('signal-demo')
-    for mode in ('audit','history','signals','garble','partitions'):sub.add_parser(mode).add_argument('file')
+    for mode in ('audit','history','signals','garble','partitions','verify'):sub.add_parser(mode).add_argument('file')
     ns=p.parse_args()
     try:
         if ns.mode in ('demo','signal-demo'):result=(demo if ns.mode=='demo' else signal_demo)()
@@ -24,6 +24,10 @@ def main():
             path=Path(ns.file)
             if path.stat().st_size>2_000_000:raise ValueError('input exceeds 2 MB')
             data=json.loads(path.read_text(),object_pairs_hook=unique,parse_constant=lambda x:(_ for _ in ()).throw(ValueError('nonfinite JSON')))
+            if ns.mode=='verify':
+                result=verify_audit(data)
+                print(json.dumps(result,sort_keys=True,indent=2))
+                return 0 if result['valid'] else 1
             required={'row_payoffs','column_payoffs',('actions' if ns.mode=='history' else 'joint')}
             if ns.mode in ('signals','garble'):required|={'row_channel','column_channel'}
             if ns.mode=='garble':required|={'row_garbling','column_garbling'}
@@ -34,4 +38,4 @@ def main():
         print(json.dumps(jsonify(result),sort_keys=True,indent=2))
     except (ValueError,OSError,TypeError,RecursionError) as e:p.error(str(e))
 
-if __name__=='__main__':main()
+if __name__=='__main__':sys.exit(main())

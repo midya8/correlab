@@ -90,15 +90,15 @@ Both payoff tables use row/column indexing. Both players maximize their own tabl
 
 ## Checks and limits of the evidence
 
-The 50 tests check the full witnesses, not only the largest gain:
+The 57 tests check the full witnesses, not only the largest gain:
 
 - Original obedience: 2,835 game/law cases from 81 ternary 2x2 row tables and 35 quarter-grid laws, with a separately varied column table. Independent action-map enumeration checks the production maximum; 28 rectangular/larger controls reach 256 maps per player.
 - Histories: all 256 length-four 2x2 histories at three prefixes. Other checks cover exact ties, zero recommendations, transforms/player exchange, replication, order, invalid inputs, CLI parity and unchanged inputs/RNG.
 - Private signals: 8,505 channel audits, 28 rectangular/larger four-signal cases with up to 625 policies per player, and 243 post-garbling lift certificates.
 - Figures: three tests bind the obedience figure's 36 numeric cells and full compressed report metadata, reject hidden-term tampering and require byte-exact regeneration. Both figures have regeneration checks.
 
-CI runs Python 3.10 through 3.13. The wheel job compares all seven complete
-CLI outputs outside the checkout; the original three CLI outputs and
+CI runs Python 3.10 through 3.13. The wheel job runs the full 57-test suite outside checkout, checks all eight
+package origins before and after, and compares all eight complete CLI outputs; the original three CLI outputs and
 obedience SVG remain unchanged by the separate signal mode.
 
 These are finite arithmetic and implementation checks. They do not establish
@@ -109,3 +109,17 @@ learning convergence, agent strength or statistical generalization.
 Supplied finite bimatrix games and supplied exact joint laws or realized histories only. Epsilon values are payoff incentives, not geometric distance or statistical confidence. No equilibrium search, adaptive algorithm, causal experiment, training guarantee, general private-information game solver, real-agent strength, scalable mechanism optimizer or production-safety claim.
 
 Established definitions from Blum-Mansour, Bonn, Roth, Barakat, Charles University and Hart-Mas-Colell are linked and reconciled in [DESIGN.md](DESIGN.md). The Roth CCE-not-CE fixture is adapted with exact arithmetic; other controls are developed examples. The source notes identify cost/payoff orientation differences and two displayed-text typos rather than inheriting them silently. MIT license.
+
+## Independent fixed-law report replay
+
+`verify_audit(report)` checks a complete original `audit` report, including the separate product-marginals control. It enumerates every complete action map rather than using the production engine's per-recommendation maximum, then rebuilds every cell term, tie, witness, count, regret and flag. The production obedience functions are neither called nor imported. The bounded input parser is shared.
+
+```sh
+python -m correlab audit examples/audit-input.json > /tmp/report.json
+python -m correlab verify /tmp/report.json
+python examples/verify_wheel.py
+```
+
+Exit zero means internally consistent; exit one reports mismatches; unreadable or malformed input exits two. Validity binds only the arithmetic to the embedded game and law, not their authenticity or real-world relevance. History and private-signal reports are outside this verifier's scope.
+
+Seven added tests replay 2,835 exact game/law cases, rectangular and four-action controls, every-leaf tampering of a complete report, strict fields and CLI failures. Both figures and all seven original reports remain unchanged. [Replay route, schema, checks and limits](VERIFY.md).

@@ -1,0 +1,838 @@
+{
+  "cce_epsilon": "0",
+  "ce_conditional_epsilon": "0",
+  "ce_pairwise_epsilon": "0",
+  "ce_swap_epsilon": "0",
+  "column_payoffs": [
+    [
+      "2",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "is_cce": true,
+  "is_ce": true,
+  "is_nash_product": false,
+  "is_product": false,
+  "joint": [
+    [
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "1/2"
+    ]
+  ],
+  "marginals": {
+    "column": [
+      "1/2",
+      "1/2"
+    ],
+    "row": [
+      "1/2",
+      "1/2"
+    ]
+  },
+  "players": [
+    {
+      "attaining_swap": [
+        0,
+        1
+      ],
+      "attaining_swap_cells": [
+        {
+          "chosen_action": 0,
+          "contribution": "0",
+          "opponent_action": 0,
+          "payoff_difference": "0",
+          "probability": "1/2",
+          "recommended_action": 0
+        },
+        {
+          "chosen_action": 0,
+          "contribution": "0",
+          "opponent_action": 1,
+          "payoff_difference": "0",
+          "probability": "0",
+          "recommended_action": 0
+        },
+        {
+          "chosen_action": 1,
+          "contribution": "0",
+          "opponent_action": 0,
+          "payoff_difference": "0",
+          "probability": "0",
+          "recommended_action": 1
+        },
+        {
+          "chosen_action": 1,
+          "contribution": "0",
+          "opponent_action": 1,
+          "payoff_difference": "0",
+          "probability": "1/2",
+          "recommended_action": 1
+        }
+      ],
+      "attaining_swap_payoff": "3/2",
+      "coarse_best_actions": [
+        0
+      ],
+      "coarse_deviations": [
+        {
+          "by_recommendation": [
+            "0",
+            "-1/2"
+          ],
+          "deviating_payoff": "1",
+          "deviation": 0,
+          "gain": "-1/2"
+        },
+        {
+          "by_recommendation": [
+            "-1",
+            "0"
+          ],
+          "deviating_payoff": "1/2",
+          "deviation": 1,
+          "gain": "-1"
+        }
+      ],
+      "coarse_max_raw_gain": "-1/2",
+      "expected_payoff": "3/2",
+      "external_regret": "0",
+      "internal_deviations": [
+        [
+          {
+            "conditional_gain": "0",
+            "deviation": 0,
+            "mass": "1/2",
+            "recommendation": 0,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "0",
+                "probability": "1/2"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "0",
+                "probability": "0"
+              }
+            ],
+            "weighted_gain": "0"
+          },
+          {
+            "conditional_gain": "-2",
+            "deviation": 1,
+            "mass": "1/2",
+            "recommendation": 0,
+            "terms": [
+              {
+                "contribution": "-1",
+                "opponent_action": 0,
+                "payoff_difference": "-2",
+                "probability": "1/2"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "1",
+                "probability": "0"
+              }
+            ],
+            "weighted_gain": "-1"
+          }
+        ],
+        [
+          {
+            "conditional_gain": "-1",
+            "deviation": 0,
+            "mass": "1/2",
+            "recommendation": 1,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "2",
+                "probability": "0"
+              },
+              {
+                "contribution": "-1/2",
+                "opponent_action": 1,
+                "payoff_difference": "-1",
+                "probability": "1/2"
+              }
+            ],
+            "weighted_gain": "-1/2"
+          },
+          {
+            "conditional_gain": "0",
+            "deviation": 1,
+            "mass": "1/2",
+            "recommendation": 1,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "0",
+                "probability": "0"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "0",
+                "probability": "1/2"
+              }
+            ],
+            "weighted_gain": "0"
+          }
+        ]
+      ],
+      "is_cce_obedient": true,
+      "is_ce_obedient": true,
+      "optimal_swap_choices": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "optimal_swap_count": 1,
+      "pairwise_internal_regret": "0",
+      "player": "row",
+      "recommendation_masses": [
+        "1/2",
+        "1/2"
+      ],
+      "swap_regret": "0",
+      "worst_conditional_gain": "0"
+    },
+    {
+      "attaining_swap": [
+        0,
+        1
+      ],
+      "attaining_swap_cells": [
+        {
+          "chosen_action": 0,
+          "contribution": "0",
+          "opponent_action": 0,
+          "payoff_difference": "0",
+          "probability": "1/2",
+          "recommended_action": 0
+        },
+        {
+          "chosen_action": 0,
+          "contribution": "0",
+          "opponent_action": 1,
+          "payoff_difference": "0",
+          "probability": "0",
+          "recommended_action": 0
+        },
+        {
+          "chosen_action": 1,
+          "contribution": "0",
+          "opponent_action": 0,
+          "payoff_difference": "0",
+          "probability": "0",
+          "recommended_action": 1
+        },
+        {
+          "chosen_action": 1,
+          "contribution": "0",
+          "opponent_action": 1,
+          "payoff_difference": "0",
+          "probability": "1/2",
+          "recommended_action": 1
+        }
+      ],
+      "attaining_swap_payoff": "3/2",
+      "coarse_best_actions": [
+        0
+      ],
+      "coarse_deviations": [
+        {
+          "by_recommendation": [
+            "0",
+            "-1/2"
+          ],
+          "deviating_payoff": "1",
+          "deviation": 0,
+          "gain": "-1/2"
+        },
+        {
+          "by_recommendation": [
+            "-1",
+            "0"
+          ],
+          "deviating_payoff": "1/2",
+          "deviation": 1,
+          "gain": "-1"
+        }
+      ],
+      "coarse_max_raw_gain": "-1/2",
+      "expected_payoff": "3/2",
+      "external_regret": "0",
+      "internal_deviations": [
+        [
+          {
+            "conditional_gain": "0",
+            "deviation": 0,
+            "mass": "1/2",
+            "recommendation": 0,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "0",
+                "probability": "1/2"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "0",
+                "probability": "0"
+              }
+            ],
+            "weighted_gain": "0"
+          },
+          {
+            "conditional_gain": "-2",
+            "deviation": 1,
+            "mass": "1/2",
+            "recommendation": 0,
+            "terms": [
+              {
+                "contribution": "-1",
+                "opponent_action": 0,
+                "payoff_difference": "-2",
+                "probability": "1/2"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "1",
+                "probability": "0"
+              }
+            ],
+            "weighted_gain": "-1"
+          }
+        ],
+        [
+          {
+            "conditional_gain": "-1",
+            "deviation": 0,
+            "mass": "1/2",
+            "recommendation": 1,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "2",
+                "probability": "0"
+              },
+              {
+                "contribution": "-1/2",
+                "opponent_action": 1,
+                "payoff_difference": "-1",
+                "probability": "1/2"
+              }
+            ],
+            "weighted_gain": "-1/2"
+          },
+          {
+            "conditional_gain": "0",
+            "deviation": 1,
+            "mass": "1/2",
+            "recommendation": 1,
+            "terms": [
+              {
+                "contribution": "0",
+                "opponent_action": 0,
+                "payoff_difference": "0",
+                "probability": "0"
+              },
+              {
+                "contribution": "0",
+                "opponent_action": 1,
+                "payoff_difference": "0",
+                "probability": "1/2"
+              }
+            ],
+            "weighted_gain": "0"
+          }
+        ]
+      ],
+      "is_cce_obedient": true,
+      "is_ce_obedient": true,
+      "optimal_swap_choices": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "optimal_swap_count": 1,
+      "pairwise_internal_regret": "0",
+      "player": "column",
+      "recommendation_masses": [
+        "1/2",
+        "1/2"
+      ],
+      "swap_regret": "0",
+      "worst_conditional_gain": "0"
+    }
+  ],
+  "product_control": {
+    "cce_epsilon": "1/4",
+    "ce_conditional_epsilon": "1/2",
+    "ce_pairwise_epsilon": "1/4",
+    "ce_swap_epsilon": "1/4",
+    "column_payoffs": [
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "is_cce": false,
+    "is_ce": false,
+    "is_nash_product": false,
+    "is_product": true,
+    "joint": [
+      [
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "marginals": {
+      "column": [
+        "1/2",
+        "1/2"
+      ],
+      "row": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    "players": [
+      {
+        "attaining_swap": [
+          0,
+          0
+        ],
+        "attaining_swap_cells": [
+          {
+            "chosen_action": 0,
+            "contribution": "0",
+            "opponent_action": 0,
+            "payoff_difference": "0",
+            "probability": "1/4",
+            "recommended_action": 0
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "0",
+            "opponent_action": 1,
+            "payoff_difference": "0",
+            "probability": "1/4",
+            "recommended_action": 0
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "1/2",
+            "opponent_action": 0,
+            "payoff_difference": "2",
+            "probability": "1/4",
+            "recommended_action": 1
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "-1/4",
+            "opponent_action": 1,
+            "payoff_difference": "-1",
+            "probability": "1/4",
+            "recommended_action": 1
+          }
+        ],
+        "attaining_swap_payoff": "1",
+        "coarse_best_actions": [
+          0
+        ],
+        "coarse_deviations": [
+          {
+            "by_recommendation": [
+              "0",
+              "1/4"
+            ],
+            "deviating_payoff": "1",
+            "deviation": 0,
+            "gain": "1/4"
+          },
+          {
+            "by_recommendation": [
+              "-1/4",
+              "0"
+            ],
+            "deviating_payoff": "1/2",
+            "deviation": 1,
+            "gain": "-1/4"
+          }
+        ],
+        "coarse_max_raw_gain": "1/4",
+        "expected_payoff": "3/4",
+        "external_regret": "1/4",
+        "internal_deviations": [
+          [
+            {
+              "conditional_gain": "0",
+              "deviation": 0,
+              "mass": "1/2",
+              "recommendation": 0,
+              "terms": [
+                {
+                  "contribution": "0",
+                  "opponent_action": 0,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "0",
+                  "opponent_action": 1,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "0"
+            },
+            {
+              "conditional_gain": "-1/2",
+              "deviation": 1,
+              "mass": "1/2",
+              "recommendation": 0,
+              "terms": [
+                {
+                  "contribution": "-1/2",
+                  "opponent_action": 0,
+                  "payoff_difference": "-2",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "1/4",
+                  "opponent_action": 1,
+                  "payoff_difference": "1",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "-1/4"
+            }
+          ],
+          [
+            {
+              "conditional_gain": "1/2",
+              "deviation": 0,
+              "mass": "1/2",
+              "recommendation": 1,
+              "terms": [
+                {
+                  "contribution": "1/2",
+                  "opponent_action": 0,
+                  "payoff_difference": "2",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "-1/4",
+                  "opponent_action": 1,
+                  "payoff_difference": "-1",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "1/4"
+            },
+            {
+              "conditional_gain": "0",
+              "deviation": 1,
+              "mass": "1/2",
+              "recommendation": 1,
+              "terms": [
+                {
+                  "contribution": "0",
+                  "opponent_action": 0,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "0",
+                  "opponent_action": 1,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "0"
+            }
+          ]
+        ],
+        "is_cce_obedient": false,
+        "is_ce_obedient": false,
+        "optimal_swap_choices": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "optimal_swap_count": 1,
+        "pairwise_internal_regret": "1/4",
+        "player": "row",
+        "recommendation_masses": [
+          "1/2",
+          "1/2"
+        ],
+        "swap_regret": "1/4",
+        "worst_conditional_gain": "1/2"
+      },
+      {
+        "attaining_swap": [
+          0,
+          0
+        ],
+        "attaining_swap_cells": [
+          {
+            "chosen_action": 0,
+            "contribution": "0",
+            "opponent_action": 0,
+            "payoff_difference": "0",
+            "probability": "1/4",
+            "recommended_action": 0
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "0",
+            "opponent_action": 1,
+            "payoff_difference": "0",
+            "probability": "1/4",
+            "recommended_action": 0
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "1/2",
+            "opponent_action": 0,
+            "payoff_difference": "2",
+            "probability": "1/4",
+            "recommended_action": 1
+          },
+          {
+            "chosen_action": 0,
+            "contribution": "-1/4",
+            "opponent_action": 1,
+            "payoff_difference": "-1",
+            "probability": "1/4",
+            "recommended_action": 1
+          }
+        ],
+        "attaining_swap_payoff": "1",
+        "coarse_best_actions": [
+          0
+        ],
+        "coarse_deviations": [
+          {
+            "by_recommendation": [
+              "0",
+              "1/4"
+            ],
+            "deviating_payoff": "1",
+            "deviation": 0,
+            "gain": "1/4"
+          },
+          {
+            "by_recommendation": [
+              "-1/4",
+              "0"
+            ],
+            "deviating_payoff": "1/2",
+            "deviation": 1,
+            "gain": "-1/4"
+          }
+        ],
+        "coarse_max_raw_gain": "1/4",
+        "expected_payoff": "3/4",
+        "external_regret": "1/4",
+        "internal_deviations": [
+          [
+            {
+              "conditional_gain": "0",
+              "deviation": 0,
+              "mass": "1/2",
+              "recommendation": 0,
+              "terms": [
+                {
+                  "contribution": "0",
+                  "opponent_action": 0,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "0",
+                  "opponent_action": 1,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "0"
+            },
+            {
+              "conditional_gain": "-1/2",
+              "deviation": 1,
+              "mass": "1/2",
+              "recommendation": 0,
+              "terms": [
+                {
+                  "contribution": "-1/2",
+                  "opponent_action": 0,
+                  "payoff_difference": "-2",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "1/4",
+                  "opponent_action": 1,
+                  "payoff_difference": "1",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "-1/4"
+            }
+          ],
+          [
+            {
+              "conditional_gain": "1/2",
+              "deviation": 0,
+              "mass": "1/2",
+              "recommendation": 1,
+              "terms": [
+                {
+                  "contribution": "1/2",
+                  "opponent_action": 0,
+                  "payoff_difference": "2",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "-1/4",
+                  "opponent_action": 1,
+                  "payoff_difference": "-1",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "1/4"
+            },
+            {
+              "conditional_gain": "0",
+              "deviation": 1,
+              "mass": "1/2",
+              "recommendation": 1,
+              "terms": [
+                {
+                  "contribution": "0",
+                  "opponent_action": 0,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                },
+                {
+                  "contribution": "0",
+                  "opponent_action": 1,
+                  "payoff_difference": "0",
+                  "probability": "1/4"
+                }
+              ],
+              "weighted_gain": "0"
+            }
+          ]
+        ],
+        "is_cce_obedient": false,
+        "is_ce_obedient": false,
+        "optimal_swap_choices": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "optimal_swap_count": 1,
+        "pairwise_internal_regret": "1/4",
+        "player": "column",
+        "recommendation_masses": [
+          "1/2",
+          "1/2"
+        ],
+        "swap_regret": "1/4",
+        "worst_conditional_gain": "1/2"
+      }
+    ],
+    "product_joint": [
+      [
+        "1/4",
+        "1/4"
+      ],
+      [
+        "1/4",
+        "1/4"
+      ]
+    ],
+    "row_payoffs": [
+      [
+        "2",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ]
+    ],
+    "shape": [
+      2,
+      2
+    ],
+    "total_variation_from_product": "0"
+  },
+  "product_joint": [
+    [
+      "1/4",
+      "1/4"
+    ],
+    [
+      "1/4",
+      "1/4"
+    ]
+  ],
+  "row_payoffs": [
+    [
+      "2",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "shape": [
+    2,
+    2
+  ],
+  "total_variation_from_product": "1/2"
+}
