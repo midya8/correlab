@@ -1,7 +1,7 @@
 # Joint play
 
 Audit a supplied joint play distribution in a small two-player general-sum
-game. Correlab returns exact rational gains for fixed-action, recommendation-
+game. This implementation returns exact rational gains for fixed-action, recommendation-
 conditioned and full-swap deviations, including an attaining action map.
 A separate private-signal mode lets a player pass or override through a trusted
 executor without separately seeing its baseline action.
@@ -57,7 +57,7 @@ python examples/render_signals.py --check
 
 A supplied joint law can be coarse correlated equilibrium (CCE) while giving a player a profitable deviation after seeing their own recommendation. Replacing that law with the product of its marginals changes the object. A small weighted deviation can still conceal a large conditional incentive on a rare signal. Even pairwise internal regret and full-swap regret are different positive-epsilon conventions.
 
-Correlab retains all fixed-action deviations, every recommendation/action pair with exact terms and conditional gains, all optimal swap choices and one attaining map with joint-cell contributions. Its production swap maximum separates by recommendation; tests independently enumerate every action map, including all 256 maps for four actions.
+This implementation retains all fixed-action deviations, every recommendation/action pair with exact terms and conditional gains, all optimal swap choices and one attaining map with joint-cell contributions. Its production swap maximum separates by recommendation; tests independently enumerate every action map, including all 256 maps for four actions.
 
 The [full proof, schema, source notes and limits](DESIGN.md) explain the four epsilon conventions and the information model. The [saved demo JSON](examples/demo.json) includes every witness, not only the figure's numbers.
 
