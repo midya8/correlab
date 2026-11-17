@@ -1,4 +1,4 @@
-# Correlab
+# Joint play
 
 Audit a supplied joint play distribution in a small two-player general-sum
 game. Correlab returns exact rational gains for fixed-action, recommendation-
@@ -10,6 +10,9 @@ The game, joint law and signal channel are inputs. This is not an equilibrium
 search algorithm, a learner or a guarantee about real agents.
 
 ![Five exact obedience controls](assets/obedience-audit.svg)
+
+The repository is now `joint-play`. The Python import and CLI names stay
+`correlab` for compatibility with existing scripts.
 
 ## Choose what the player knows
 
